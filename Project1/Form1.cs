@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace Project1
 {
-    public partial class Form1 : Form
+    public partial class FormProject : Form
     {
-        public Form1()
+        public FormProject()
         {
             InitializeComponent();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double num1 = double.Parse(txtNum1.Text);
+                double num2 = double.Parse(txtNum2.Text);
+            }
         }
     }
 }
