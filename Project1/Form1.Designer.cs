@@ -40,7 +40,9 @@
             this.lblResult = new System.Windows.Forms.Label();
             this.grpFunctions = new System.Windows.Forms.GroupBox();
             this.btnReset = new System.Windows.Forms.Button();
+            this.picBox = new System.Windows.Forms.PictureBox();
             this.grpFunctions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNumOne
@@ -96,6 +98,7 @@
             this.btnSub.Text = "&Subtract";
             this.btnSub.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSub.UseVisualStyleBackColor = true;
+            this.btnSub.Click += new System.EventHandler(this.btnSub_Click);
             // 
             // btnMultiply
             // 
@@ -105,6 +108,7 @@
             this.btnMultiply.TabIndex = 6;
             this.btnMultiply.Text = "&Multiply";
             this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
             // 
             // btnDivide
             // 
@@ -114,6 +118,7 @@
             this.btnDivide.TabIndex = 7;
             this.btnDivide.Text = "&Divide";
             this.btnDivide.UseVisualStyleBackColor = true;
+            this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
             // 
             // btnExit
             // 
@@ -123,6 +128,7 @@
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblResult
             // 
@@ -156,13 +162,27 @@
             this.btnReset.TabIndex = 11;
             this.btnReset.Text = "&Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // picBox
+            // 
+            this.picBox.Image = global::Project1.Properties.Resources.calculator;
+            this.picBox.Location = new System.Drawing.Point(-5, 25);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(216, 176);
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picBox.TabIndex = 12;
+            this.picBox.TabStop = false;
+            this.picBox.Visible = false;
             // 
             // FormProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1126, 642);
+            this.Controls.Add(this.picBox);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.grpFunctions);
             this.Controls.Add(this.lblResult);
@@ -175,6 +195,7 @@
             this.Name = "FormProject";
             this.Text = "4 Function Calculator";
             this.grpFunctions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,6 +215,7 @@
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.GroupBox grpFunctions;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.PictureBox picBox;
     }
 }
 
